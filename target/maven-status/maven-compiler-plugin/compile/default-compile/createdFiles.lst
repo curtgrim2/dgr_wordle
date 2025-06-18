@@ -1,0 +1,4 @@
+com\example\api\Controller.class
+com\example\api\CharacterLoader.class
+com\example\api\Character.class
+com\example\api\CharacterApiApp.class

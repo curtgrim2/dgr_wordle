@@ -1,0 +1,57 @@
+[
+    {"firstname":"Makoto","lastname":"Naegi","sex":"male","haircolor":"brown","eyecolor":"brown","height":"5'3","hint1":"","hint2":"Ultimate L..","maingame":"DG1"},
+    {"firstname":"Kyoko","lastname":"Kirigiri","sex":"female","haircolor":"white","eyecolor":"purple","height":"5'6","hint1":"","hint2":"Ultimate D..","maingame":"DG1"},
+    {"firstname":"Byakuya","lastname":"Togami","sex":"male","haircolor":"blonde","eyecolor":"","height":"6'1","hint1":"","hint2":"","maingame":"DG1"},
+    {"firstname":"Celestia/Celeste/Taeko","lastname":"Ludenberg/Yasuhiro","sex":"female","haircolor":"black","eyecolor":"red","height":"5'5","hint1":"Queen of Liars","hint2":"","maingame":"DG1"},
+    {"firstname":"Chihiro","lastname":"Fujisaki","sex":"male","haircolor":"brown","eyecolor":"brown","height":"4'10","hint1":"Impact is felt for games to come...","hint2":"","maingame":"DG1"},
+    {"firstname":"Leon","lastname":"Kuwata","sex":"male","haircolor":"orange","eyecolor":"blue","height":"5'9","hint1":"","hint2":"","maingame":"DG1"},
+    {"firstname":"Sakura","lastname":"Ogami","sex":"female","haircolor":"white","eyecolor":"white","height":"6'4","hint1":"","hint2":"","maingame":"DG1"},
+    {"firstname":"Hifimi","lastname":"Yamada","sex":"male","haircolor":"brown","eyecolor":"black","height":"5'7","hint1":"","hint2":"","maingame":"DG1"},
+    {"firstname":"Aoi","lastname":"Asahina","sex":"female","haircolor":"brown","eyecolor":"blue","height":"5'3","hint1":"","hint2":"","maingame":"DG1"},
+    {"firstname":"Kiyotaka","lastname":"Ishimaru","sex":"male","haircolor":"black","eyecolor":"red","height":"5'9","hint1":"","hint2":"","maingame":"DG1"},
+    {"firstname":"Mondo","lastname":"Owada","sex":"male","haircolor":"brown","eyecolor":"white","height":"6'2","hint1":"","hint2":"","maingame":"DG1"},
+    {"firstname":"Sayaka","lastname":"Maizono","sex":"female","haircolor":"blue","eyecolor":"blue","height":"5'5","hint1":"","hint2":"","maingame":"DG1"},
+    {"firstname":"Yasuhiro","lastname":"Hagakure","sex":"male","haircolor":"brown","eyecolor":"brown","height":"6'0","hint1":"","hint2":"","maingame":"DG1"},
+    {"firstname":"Toko","lastname":"Fukawa","sex":"female","haircolor":"black","eyecolor":"grey","height":"5'4","hint1":"","hint2":"","maingame":"DG1"},
+    {"firstname":"Mukuro","lastname":"Ikusaba","sex":"female","haircolor":"black","eyecolor":"blue","height":"5'7","hint1":"","hint2":"","maingame":"DG1"},
+    {"firstname":"Junko","lastname":"Enoshima","sex":"female","haircolor":"blonde","eyecolor":"blue","height":"5'7","hint1":"","hint2":"","maingame":"DG1"},
+
+    {"firstname":"Alter Ego","lastname":"NONE","sex":"","haircolor":"","eyecolor":"","height":"","hint1":"","hint2":"","maingame":"DG1"},
+    {"firstname":"Genocide Jack","lastname":"NONE","sex":"female","haircolor":"","eyecolor":"","height":"","hint1":"Technicality","hint2":"","maingame":"DG1"},
+    {"firstname":"Jin","lastname":"Kirigiri","sex":"male","haircolor":"","eyecolor":"","height":"","hint1":"GOTTA BLAST!","hint2":"","maingame":"DG1"},
+
+    {"firstname":"","lastname":"Naegi","sex":"","haircolor":"","eyecolor":"","height":"","hint1":"","hint2":"","maingame":"UDG"},
+    {"firstname":"Grand Bois Cheri","lastname":"Ludenberg","sex":"male","haircolor":"","eyecolor":"","height":"","hint1":"An unusual captive...","hint2":"","maingame":"UDG"},
+
+
+    {"firstname":"Hajime","lastname":"Hinata","sex":"","haircolor":"","eyecolor":"","height":"","hint1":"","hint2":"","maingame":"DG2"},
+    {"firstname":"Chiaki","lastname":"Nanami","sex":"female","haircolor":"","eyecolor":"pink","height":"5'2","hint1":"","hint2":"","maingame":"DG2"},
+    {"firstname":"Nagito","lastname":"Komaeda","sex":"male","haircolor":"white","eyecolor":"","height":"","hint1":"","hint2":"ITS THE REMIX","maingame":"DG2"},
+    {"firstname":"Soda","lastname":"","sex":"male","haircolor":"","eyecolor":"","height":"","hint1":"","hint2":"","maingame":"DG2"},
+    {"firstname":"Sonia","lastname":"Nevermind","sex":"female","haircolor":"","eyecolor":"","height":"","hint1":"","hint2":"","maingame":"DG2"},
+    {"firstname":"Fuyuhiko","lastname":"Kurzuyu","sex":"male","haircolor":"blonde","eyecolor":"","height":"","hint1":"","hint2":"","maingame":"DG2"},
+    {"firstname":"Mahiru","lastname":"Koizumi","sex":"female","haircolor":"red","eyecolor":"","height":"","hint1":"","hint2":"","maingame":"DG2"},
+    {"firstname":"Nekomaru","lastname":"Nidai","sex":"","haircolor":"","eyecolor":"","height":"","hint1":"","hint2":"","maingame":"DG2"},
+    {"firstname":"","lastname":"","sex":"","haircolor":"","eyecolor":"","height":"","hint1":"","hint2":"","maingame":"DG2"},
+    {"firstname":"","lastname":"","sex":"","haircolor":"","eyecolor":"","height":"","hint1":"","hint2":"","maingame":"DG2"},
+    {"firstname":"","lastname":"","sex":"","haircolor":"","eyecolor":"","height":"","hint1":"","hint2":"","maingame":"DG2"},
+    {"firstname":"","lastname":"","sex":"","haircolor":"","eyecolor":"","height":"","hint1":"","hint2":"","maingame":"DG2"},
+    {"firstname":"","lastname":"","sex":"","haircolor":"","eyecolor":"","height":"","hint1":"","hint2":"","maingame":"DG2"},
+    {"firstname":"","lastname":"","sex":"","haircolor":"","eyecolor":"","height":"","hint1":"","hint2":"","maingame":"DG2"},
+    {"firstname":"","lastname":"","sex":"","haircolor":"","eyecolor":"","height":"","hint1":"","hint2":"","maingame":"DG2"},
+
+    {"firstname":"Mechamaru","lastname":"","sex":"male","haircolor":"NONE","eyecolor":"","height":"","hint1":"","hint2":"","maingame":"DG2"},
+
+
+
+    {"firstname":"Monokuma","lastname":"None","sex":"male","haircolor":"black/white","eyecolor":"","height":"","hint1":"","hint2":""},
+    {"firstname":"Monomi/Usami","lastname":"","sex":"","haircolor":"","eyecolor":"","height":"","hint1":"","hint2":""},
+    {"firstname":"Monosuke","lastname":"","sex":"","haircolor":"","eyecolor":"","height":"","hint1":"","hint2":""}
+
+
+
+
+
+
+
+]

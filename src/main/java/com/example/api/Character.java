@@ -48,6 +48,8 @@ public class Character{
 
     public String getFirstname(){
         return firstname;
+
+        
     }
 
     public String getLastname(){

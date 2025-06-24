@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="style.css">
     <body>
         <div>Danganronpa Wordle </div>
-        <div id="mainbox"> 
+        <div id="mainbox">
             Test
 
             <br>
@@ -17,16 +17,16 @@
 
 
                 <span>Name?</span>
-                <input type="text" id="theguess"/> 
+                <input type="text" id="theguess"/>
                 <span id="submitbutton" onclick="userguessed()" >GUESS</span>
-                
+
                 <br>
                 <br>
 
 
                 <table>
                     <tr>
-                        <th>First Name</th> 
+                        <th>First Name</th>
                         <th>Last Name</th>
                         <th>Sex</th>
                         <th>Hair Color</th>
@@ -36,49 +36,49 @@
                     </tr>
 
                     <tr class="displayguesses">
-                        <th id="displayfirstname"></th> 
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <td class="displayfirstname"></td>
+                        <td class="displaylastname"></td>
+                        <td class="displaysex"></td>
+                        <td class="displayhaircolor"></td>
+                        <td class="displayeyecolor"></td>
+                        <td class="displayheight"></td>
+                        <td class="displaymaingame"></td>
                     </tr>
                     <tr class="displayguesses">
-                        <th></th> 
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <td class="displayfirstname"></td>
+                        <td class="displaylastname"></td>
+                        <td class="displaysex"></td>
+                        <td class="displayhaircolor"></td>
+                        <td class="displayeyecolor"></td>
+                        <td class="displayheight"></td>
+                        <td class="displaymaingame"></td>
                     </tr>
                     <tr class="displayguesses">
-                        <th></th> 
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <td class="displayfirstname"></td>
+                        <td class="displaylastname"></td>
+                        <td class="displaysex"></td>
+                        <td class="displayhaircolor"></td>
+                        <td class="displayeyecolor"></td>
+                        <td class="displayheight"></td>
+                        <td class="displaymaingame"></td>
                     </tr>
                     <tr class="displayguesses">
-                        <th></th> 
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <td class="displayfirstname"></td>
+                        <td class="displaylastname"></td>
+                        <td class="displaysex"></td>
+                        <td class="displayhaircolor"></td>
+                        <td class="displayeyecolor"></td>
+                        <td class="displayheight"></td>
+                        <td class="displaymaingame"></td>
                     </tr>
                     <tr class="displayguesses">
-                        <th></th> 
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <td class="displayfirstname"></td>
+                        <th  class="displaylastname"></td>
+                        <td class="displaysex"></td>
+                        <td class="displayhaircolor"></td>
+                        <td class="displayeyecolor"></td>
+                        <td class="displayheight"></td>
+                        <td class="displaymaingame"></td>
                     </tr>
                 </table>
 
@@ -86,34 +86,64 @@
     </body>
 
     <script>
-        let fulllist =[];
+        //let fulllist =[];
         var displayguesses = document.querySelectorAll('.displayguesses');
         var numberofguesses=0;
-        console.log(displayguesses);
+        var therightanswer = "Hajime";
+        var characterexists=false;
+        var guessedindex=0;
         function userguessed(){
+
+            console.log(fullist);
+            console.log(fullist.length);
+
+
             if(numberofguesses==5){
                 //NO MORE GUESSES FOR THE DAY
             }
             else{
-                displayguesses[numberofguesses].style.display="block";
-                document.getElementById("displayfirstname").textContent="Makoto";    //I'm messing around; lets have some serious logic             
-                numberofguesses++;
 
-                //console.log(numberofguesses);
-                //console.log(theguess.value);
-                testfunction(theguess.value);
-            }  
+                /*First we should make sure the name the user guessed is within the json, THEN
+                iterate through the json list and compare the guessed characters stats with the correct characters stats. Probably have to do a
+                if loop for each category and the background color is determined if they are right or not
+                */
+
+                for(let x=0;x<fullist.length;x++){
+                        if(theguess.value==fullist[x].firstname){
+                            //console.log("WE FOUND THE CHARACTER");
+                            guessedindex=x;
+                            characterexists=true;
+                        }
+                    }
+
+                    if(characterexists==false){
+                        console.log("PLEASE PUT A VALID CHARACTER");
+                    }
+                    else{
+                        displayguesses[numberofguesses].style.display="table-row";
+                        document.getElementsByClassName("displayfirstname")[numberofguesses].textContent=theguess.value;
+                        document.getElementsByClassName("displaylastname")[numberofguesses].textContent=fullist[guessedindex].lastname;
+                        document.getElementsByClassName("displaysex")[numberofguesses].textContent=fullist[guessedindex].sex;
+                        document.getElementsByClassName("displayheight")[numberofguesses].textContent=fullist[guessedindex].height;
+                        document.getElementsByClassName("displayeyecolor")[numberofguesses].textContent=fullist[guessedindex].eyecolor;
+                        document.getElementsByClassName("displayhaircolor")[numberofguesses].textContent=fullist[guessedindex].haircolor;
+                        document.getElementsByClassName("displaymaingame")[numberofguesses].textContent=fullist[guessedindex].maingame;
+
+
+                        numberofguesses++;
+                        characterexists=false;
+                    }
+
+            }
         }
-
+/*
     function testfunction(istheguessright){
         console.log(istheguessright);
         console.log(fullist);
 
         if(fulllist){
-
         }
-
-    }
+    } */
 
 
         fetch("/dgrtojson")//fetch("http:/localhost:8080/dgrtojson")

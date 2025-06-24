@@ -12,17 +12,21 @@ div,span{
 
 table{
     margin:0 auto 0 auto;
-    width:90%;
+    border-collapse: collapse;
+    width:100%;
 }
 
 table,th,tr{
     color: white;
     border:2px white solid;
 }
+th{
+    text-align: left;
+}
 
 td{
     border: .5px white solid;
-
+    text-align:center;
 }
 
 #key{
@@ -56,4 +60,6 @@ td{
 
 .displayguesses{
     display:none;
+    position: relative;
+    width:100%;
 }

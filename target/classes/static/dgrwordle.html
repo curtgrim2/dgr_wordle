@@ -86,16 +86,22 @@
     </body>
 
     <script>
-        //let fulllist =[];
+        let fullist =[];
         var displayguesses = document.querySelectorAll('.displayguesses');
         var numberofguesses=0;
         var therightanswer = "Hajime";
         var characterexists=false;
         var guessedindex=0;
+        var more_lessheight="";
+
+        let correctindex = 0; //Math.floor(Math.random()*40);
+
+        console.log(fullist);
+
         function userguessed(){
 
             console.log(fullist);
-            console.log(fullist.length);
+            console.log(correctindex);
 
 
             if(numberofguesses==5){
@@ -122,13 +128,64 @@
                     else{
                         displayguesses[numberofguesses].style.display="table-row";
                         document.getElementsByClassName("displayfirstname")[numberofguesses].textContent=theguess.value;
-                        document.getElementsByClassName("displaylastname")[numberofguesses].textContent=fullist[guessedindex].lastname;
-                        document.getElementsByClassName("displaysex")[numberofguesses].textContent=fullist[guessedindex].sex;
-                        document.getElementsByClassName("displayheight")[numberofguesses].textContent=fullist[guessedindex].height;
-                        document.getElementsByClassName("displayeyecolor")[numberofguesses].textContent=fullist[guessedindex].eyecolor;
-                        document.getElementsByClassName("displayhaircolor")[numberofguesses].textContent=fullist[guessedindex].haircolor;
-                        document.getElementsByClassName("displaymaingame")[numberofguesses].textContent=fullist[guessedindex].maingame;
 
+                        if(theguess.value==fullist[correctindex].firstname){
+                            document.getElementsByClassName("displayfirstname")[numberofguesses].style.backgroundColor="green";
+                        }
+                        else{
+                            document.getElementsByClassName("displayfirstname")[numberofguesses].style.backgroundColor="red";
+                        }
+
+                        document.getElementsByClassName("displaylastname")[numberofguesses].textContent=fullist[guessedindex].lastname;
+                         if(fullist[guessedindex].lastname==fullist[correctindex].lastname){
+                            document.getElementsByClassName("displaylastname")[numberofguesses].style.backgroundColor="green";
+                        }
+                        else{
+                            document.getElementsByClassName("displaylastname")[numberofguesses].style.backgroundColor="red";
+                        }
+
+                        document.getElementsByClassName("displaysex")[numberofguesses].textContent=fullist[guessedindex].sex;
+                         if(fullist[guessedindex].sex==fullist[correctindex].sex){
+                            document.getElementsByClassName("displaysex")[numberofguesses].style.backgroundColor="green";
+                        }
+                        else{
+                            document.getElementsByClassName("displaysex")[numberofguesses].style.backgroundColor="red";
+                        }
+
+                        compareheights();
+                        document.getElementsByClassName("displayheight")[numberofguesses].textContent=fullist[guessedindex].height + more_lessheight;
+                        if(fullist[guessedindex].height==fullist[correctindex].height){
+                            document.getElementsByClassName("displayheight")[numberofguesses].style.backgroundColor="green";
+
+                        }
+                        else{
+                            document.getElementsByClassName("displayheight")[numberofguesses].style.backgroundColor="red"; //more_lessheight
+                        }
+
+
+                        document.getElementsByClassName("displayeyecolor")[numberofguesses].textContent=fullist[guessedindex].eyecolor;
+                        if(fullist[guessedindex].eyecolor==fullist[correctindex].eyecolor){
+                            document.getElementsByClassName("displayeyecolor")[numberofguesses].style.backgroundColor="green";
+                        }
+                        else{
+                            document.getElementsByClassName("displayeyecolor")[numberofguesses].style.backgroundColor="red";
+                        }
+                        
+                        document.getElementsByClassName("displayhaircolor")[numberofguesses].textContent=fullist[guessedindex].haircolor;
+                         if(fullist[guessedindex].haircolor==fullist[correctindex].haircolor){
+                            document.getElementsByClassName("displayhaircolor")[numberofguesses].style.backgroundColor="green";
+                        }
+                        else{
+                            document.getElementsByClassName("displayhaircolor")[numberofguesses].style.backgroundColor="red";
+                        }
+
+                        document.getElementsByClassName("displaymaingame")[numberofguesses].textContent=fullist[guessedindex].maingame;
+                         if(fullist[guessedindex].maingame==fullist[correctindex].maingame){
+                            document.getElementsByClassName("displaymaingame")[numberofguesses].style.backgroundColor="green";
+                        }
+                        else{
+                            document.getElementsByClassName("displaymaingame")[numberofguesses].style.backgroundColor="red";
+                        }
 
                         numberofguesses++;
                         characterexists=false;
@@ -145,12 +202,44 @@
         }
     } */
 
+    function gettodaysanswer(){
+        correctindex = Math.floor(Math.random()*fullist.length);
+        console.log(correctindex);
+        console.log(fullist[correctindex].firstname);
+    }
+
+    function compareheights(){ //WORK ON THIS
+        //fullist[guessedindex].height==fullist[correctindex].height
+
+        var guesscheight=fullist[guessedindex].height;
+        console.log(guesscheight.length);
+        guesscheight = guesscheight.slice(0,1) + guesscheight.slice(2,guesscheight.length); //cutting out the ' in the height
+
+        var correctcheight=fullist[correctindex].height;  
+        correctcheight = correctcheight.slice(0,1) + correctcheight.slice(2,correctcheight.length);
+
+        if(guessedindex<correctcheight){
+            more_lessheight="  (Taller)";
+        }
+        if(guessedindex>correctcheight){
+            more_lessheight="  (Shorter)";
+        }
+        if(correctcheight==""){ //WORK ON THIS
+            more_lessheight="Height UNKNOWN";
+        }
+        if(guessedindex==correctcheight){
+            more_lessheight="";
+        }
+
+    }
+
 
         fetch("/dgrtojson")//fetch("http:/localhost:8080/dgrtojson")
         .then(res=>res.json())
         .then(data=>{
             fullist = data;
             //testfunction();
+            gettodaysanswer();
         });
 
     </script>

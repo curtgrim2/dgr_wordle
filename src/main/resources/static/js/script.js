@@ -183,17 +183,19 @@
         var correctcheight=fullist[correctindex].height;  
         correctcheight = correctcheight.slice(0,1) + correctcheight.slice(2,correctcheight.length);
 
-        if(guessedindex<correctcheight){
+        if(guesscheight<correctcheight){
             more_lessheight="  (Taller)";
+            console.log(guessedindex, " vs ", correctcheight);
         }
-        if(guessedindex>correctcheight){
+        if(guesscheight>correctcheight){
             more_lessheight="  (Shorter)";
         }
         if(correctcheight==""){ //WORK ON THIS
             more_lessheight="Height UNKNOWN";
         }
-        if(guessedindex==correctcheight){
+        if(guesscheight==correctcheight){
             more_lessheight="";
+            console.log("Equal height");
         }
 
     }

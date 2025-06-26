@@ -16,11 +16,11 @@
     {"firstname":"Mukuro","lastname":"Ikusaba","sex":"female","haircolor":"black","eyecolor":"blue","height":"5'7","hint1":"","hint2":"","maingame":"DG1"},
     {"firstname":"Junko","lastname":"Enoshima","sex":"female","haircolor":"blonde","eyecolor":"blue","height":"5'7","hint1":"","hint2":"","maingame":"DG1"},
 
-    {"firstname":"Alter Ego","lastname":"NONE","sex":"","haircolor":"","eyecolor":"","height":"","hint1":"","hint2":"","maingame":"DG1"},
-    {"firstname":"Genocide Jack","lastname":"NONE","sex":"female","haircolor":"","eyecolor":"","height":"","hint1":"Technicality","hint2":"","maingame":"DG1"},
+    {"firstname":"Alter Ego","lastname":"","sex":"","haircolor":"","eyecolor":"","height":"","hint1":"","hint2":"","maingame":"DG1"},
+    {"firstname":"Genocide Jack","lastname":"","sex":"female","haircolor":"","eyecolor":"","height":"","hint1":"Technicality","hint2":"","maingame":"DG1"},
     {"firstname":"Jin","lastname":"Kirigiri","sex":"male","haircolor":"","eyecolor":"","height":"","hint1":"GOTTA BLAST!","hint2":"","maingame":"DG1"},
 
-    {"firstname":"","lastname":"Naegi","sex":"","haircolor":"","eyecolor":"","height":"","hint1":"","hint2":"","maingame":"UDG"},
+    {"firstname":"","lastname":"Naegi","sex":"female","haircolor":"","eyecolor":"","height":"","hint1":"","hint2":"","maingame":"UDG"},
     {"firstname":"Grand Bois Cheri","lastname":"Ludenberg","sex":"male","haircolor":"","eyecolor":"","height":"","hint1":"An unusual captive...","hint2":"","maingame":"UDG"},
 
 
@@ -40,13 +40,13 @@
     {"firstname":"","lastname":"","sex":"","haircolor":"","eyecolor":"","height":"","hint1":"","hint2":"","maingame":"DG2"},
     {"firstname":"","lastname":"","sex":"","haircolor":"","eyecolor":"","height":"","hint1":"","hint2":"","maingame":"DG2"},
 
-    {"firstname":"Mechamaru","lastname":"","sex":"male","haircolor":"NONE","eyecolor":"","height":"","hint1":"","hint2":"","maingame":"DG2"},
+    {"firstname":"Mechamaru","lastname":"","sex":"male","haircolor":"","eyecolor":"","height":"","hint1":"","hint2":"","maingame":"DG2"},
 
 
 
-    {"firstname":"Monokuma","lastname":"None","sex":"male","haircolor":"black/white","eyecolor":"","height":"","hint1":"","hint2":""},
-    {"firstname":"Monomi/Usami","lastname":"","sex":"","haircolor":"","eyecolor":"","height":"","hint1":"","hint2":""},
-    {"firstname":"Monosuke","lastname":"","sex":"","haircolor":"","eyecolor":"","height":"","hint1":"","hint2":""}
+    {"firstname":"Monokuma","lastname":"","sex":"male","haircolor":"black/white","eyecolor":"red/black","height":"","hint1":"","hint2":"Is involved in all 3 main games","maingame":"DG1"},
+    {"firstname":"Monomi/Usami","lastname":"","sex":"","haircolor":"","eyecolor":"","height":"","hint1":"","hint2":"Name was changed in game.","maingame":"DG2"},
+    {"firstname":"Monosuke","lastname":"","sex":"male","haircolor":"","eyecolor":"","height":"","hint1":"","hint2":"","maingame":"DG3"}
 
 
 

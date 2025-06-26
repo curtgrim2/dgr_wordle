@@ -4,7 +4,6 @@
     <body>
         <div>Danganronpa Wordle </div>
         <div id="mainbox">
-            Test
 
             <br>
 
@@ -17,15 +16,16 @@
 
 
                 <span>Name?</span>
-                <input type="text" id="theguess"/>
-                <span id="submitbutton" onclick="userguessed()" >GUESS</span>
+                <input type="text" id="theguess" onkeyup="searchengine()" /> <!--onkeyup="searchengine()"-->
+                <span id="submitbutton" onclick="userguessed(document.getElementById('theguess').value)" >GUESS</span>
+                <div id="dropdown">Hello</div>
 
                 <br>
                 <br>
 
 
                 <table>
-                    <tr>
+                    <tr id="columns">
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Sex</th>
@@ -83,164 +83,10 @@
                 </table>
 
         </div>
+
+        <div id="listofcharacters">
+
+        </div>
+        <script type="text/javascript" src="/js/script.js"></script>
     </body>
-
-    <script>
-        let fullist =[];
-        var displayguesses = document.querySelectorAll('.displayguesses');
-        var numberofguesses=0;
-        var therightanswer = "Hajime";
-        var characterexists=false;
-        var guessedindex=0;
-        var more_lessheight="";
-
-        let correctindex = 0; //Math.floor(Math.random()*40);
-
-        console.log(fullist);
-
-        function userguessed(){
-
-            console.log(fullist);
-            console.log(correctindex);
-
-
-            if(numberofguesses==5){
-                //NO MORE GUESSES FOR THE DAY
-            }
-            else{
-
-                /*First we should make sure the name the user guessed is within the json, THEN
-                iterate through the json list and compare the guessed characters stats with the correct characters stats. Probably have to do a
-                if loop for each category and the background color is determined if they are right or not
-                */
-
-                for(let x=0;x<fullist.length;x++){
-                        if(theguess.value==fullist[x].firstname){
-                            //console.log("WE FOUND THE CHARACTER");
-                            guessedindex=x;
-                            characterexists=true;
-                        }
-                    }
-
-                    if(characterexists==false){
-                        console.log("PLEASE PUT A VALID CHARACTER");
-                    }
-                    else{
-                        displayguesses[numberofguesses].style.display="table-row";
-                        document.getElementsByClassName("displayfirstname")[numberofguesses].textContent=theguess.value;
-
-                        if(theguess.value==fullist[correctindex].firstname){
-                            document.getElementsByClassName("displayfirstname")[numberofguesses].style.backgroundColor="green";
-                        }
-                        else{
-                            document.getElementsByClassName("displayfirstname")[numberofguesses].style.backgroundColor="red";
-                        }
-
-                        document.getElementsByClassName("displaylastname")[numberofguesses].textContent=fullist[guessedindex].lastname;
-                         if(fullist[guessedindex].lastname==fullist[correctindex].lastname){
-                            document.getElementsByClassName("displaylastname")[numberofguesses].style.backgroundColor="green";
-                        }
-                        else{
-                            document.getElementsByClassName("displaylastname")[numberofguesses].style.backgroundColor="red";
-                        }
-
-                        document.getElementsByClassName("displaysex")[numberofguesses].textContent=fullist[guessedindex].sex;
-                         if(fullist[guessedindex].sex==fullist[correctindex].sex){
-                            document.getElementsByClassName("displaysex")[numberofguesses].style.backgroundColor="green";
-                        }
-                        else{
-                            document.getElementsByClassName("displaysex")[numberofguesses].style.backgroundColor="red";
-                        }
-
-                        compareheights();
-                        document.getElementsByClassName("displayheight")[numberofguesses].textContent=fullist[guessedindex].height + more_lessheight;
-                        if(fullist[guessedindex].height==fullist[correctindex].height){
-                            document.getElementsByClassName("displayheight")[numberofguesses].style.backgroundColor="green";
-
-                        }
-                        else{
-                            document.getElementsByClassName("displayheight")[numberofguesses].style.backgroundColor="red"; //more_lessheight
-                        }
-
-
-                        document.getElementsByClassName("displayeyecolor")[numberofguesses].textContent=fullist[guessedindex].eyecolor;
-                        if(fullist[guessedindex].eyecolor==fullist[correctindex].eyecolor){
-                            document.getElementsByClassName("displayeyecolor")[numberofguesses].style.backgroundColor="green";
-                        }
-                        else{
-                            document.getElementsByClassName("displayeyecolor")[numberofguesses].style.backgroundColor="red";
-                        }
-                        
-                        document.getElementsByClassName("displayhaircolor")[numberofguesses].textContent=fullist[guessedindex].haircolor;
-                         if(fullist[guessedindex].haircolor==fullist[correctindex].haircolor){
-                            document.getElementsByClassName("displayhaircolor")[numberofguesses].style.backgroundColor="green";
-                        }
-                        else{
-                            document.getElementsByClassName("displayhaircolor")[numberofguesses].style.backgroundColor="red";
-                        }
-
-                        document.getElementsByClassName("displaymaingame")[numberofguesses].textContent=fullist[guessedindex].maingame;
-                         if(fullist[guessedindex].maingame==fullist[correctindex].maingame){
-                            document.getElementsByClassName("displaymaingame")[numberofguesses].style.backgroundColor="green";
-                        }
-                        else{
-                            document.getElementsByClassName("displaymaingame")[numberofguesses].style.backgroundColor="red";
-                        }
-
-                        numberofguesses++;
-                        characterexists=false;
-                    }
-
-            }
-        }
-/*
-    function testfunction(istheguessright){
-        console.log(istheguessright);
-        console.log(fullist);
-
-        if(fulllist){
-        }
-    } */
-
-    function gettodaysanswer(){
-        correctindex = Math.floor(Math.random()*fullist.length);
-        console.log(correctindex);
-        console.log(fullist[correctindex].firstname);
-    }
-
-    function compareheights(){ //WORK ON THIS
-        //fullist[guessedindex].height==fullist[correctindex].height
-
-        var guesscheight=fullist[guessedindex].height;
-        console.log(guesscheight.length);
-        guesscheight = guesscheight.slice(0,1) + guesscheight.slice(2,guesscheight.length); //cutting out the ' in the height
-
-        var correctcheight=fullist[correctindex].height;  
-        correctcheight = correctcheight.slice(0,1) + correctcheight.slice(2,correctcheight.length);
-
-        if(guessedindex<correctcheight){
-            more_lessheight="  (Taller)";
-        }
-        if(guessedindex>correctcheight){
-            more_lessheight="  (Shorter)";
-        }
-        if(correctcheight==""){ //WORK ON THIS
-            more_lessheight="Height UNKNOWN";
-        }
-        if(guessedindex==correctcheight){
-            more_lessheight="";
-        }
-
-    }
-
-
-        fetch("/dgrtojson")//fetch("http:/localhost:8080/dgrtojson")
-        .then(res=>res.json())
-        .then(data=>{
-            fullist = data;
-            //testfunction();
-            gettodaysanswer();
-        });
-
-    </script>
 </html>
